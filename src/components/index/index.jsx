@@ -8,6 +8,47 @@ import { sampleOne, sampleTwo, watchUserChange, login, signout, getTest, postTes
 import Navbarcomp from '../navbar/navbar.jsx'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
+var AnimatedButton = React.createClass({
+
+  componentWillMount(){
+    console.log(this.props)
+    this.setState({loading: true})
+  },
+  componentDidMount() {
+    var self = this;
+    setTimeout(() => {
+      self.setState({loading: false});
+    }, self.props.timeout);
+  },
+  render: function() {
+
+    if (this.state.loading) {
+        return (
+          <div />
+        )
+    } else {
+      if(this.props.link){
+        return (
+            <ReactCSSTransitionGroup transitionName={this.props.name} transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
+              <div>
+                <a target="_blank" href="http://conormacken.com/blog">
+                    <h3 key={this.props.name} className={this.props.style}>{this.props.name}</h3>
+                </a>
+              </div>
+            </ReactCSSTransitionGroup>
+        )
+      }else{
+        return (
+            <ReactCSSTransitionGroup transitionName={this.props.name} transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
+                <h3 key={this.props.name} className={this.props.style}>{this.props.name}</h3>
+            </ReactCSSTransitionGroup>
+        )
+      }
+    }
+  }
+
+});
+
 class Index extends React.Component {
 
   constructor(props) {
@@ -22,7 +63,8 @@ class Index extends React.Component {
       passwordLogin: null,
       title: "{CONOR MACKEN}",
       subTitle: "Full Stack JS Developer",
-      contactLinkText: "Contact"
+      contactLinkText: "",
+      items:[]
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -35,7 +77,6 @@ class Index extends React.Component {
     this.login = this.login.bind(this);
 
     this.props.watchUserChange();
-
   }
 
   handleChange(event) {
@@ -72,31 +113,17 @@ class Index extends React.Component {
               </Col>
           </Row>
           <Row className="marginTop">
-            <Col xs={4}>
-              <ReactCSSTransitionGroup transitionName="contact" transitionAppear={true} transitionAppearTimeout={1500} transitionEnter={false} transitionLeave={false}>
-                  <h3 key={this.state.contactLinkText} className="text-center block">{this.state.contactLinkText}</h3>
-              </ReactCSSTransitionGroup>
-            </Col>
-            <Col xs={4}>
-              <ReactCSSTransitionGroup transitionName="about" transitionAppear={true} transitionAppearTimeout={3000} transitionEnter={false} transitionLeave={false}>
-                  <h3 className="text-center two">About</h3>
-              </ReactCSSTransitionGroup>
-              <ReactCSSTransitionGroup transitionName="testimonials" transitionAppear={true} transitionAppearTimeout={2500} transitionEnter={false} transitionLeave={false}>
-                  <h3 className="text-center four">Testimonials</h3>
-              </ReactCSSTransitionGroup>
-            </Col>
-            <Col xs={4}>
-              <ReactCSSTransitionGroup transitionName="work" transitionAppear={true} transitionAppearTimeout={3000} transitionEnter={false} transitionLeave={false}>
-                  <h3 className="text-center three">Work</h3>
-              </ReactCSSTransitionGroup>
-              <ReactCSSTransitionGroup transitionName="blog" transitionAppear={true} transitionAppearTimeout={3500} transitionEnter={false} transitionLeave={false}>
-                <div>
-                  <a href="http://conormacken.com/blog">
-                    <h3 className="text-center five">Blog</h3>
-                  </a>
-                </div>
-              </ReactCSSTransitionGroup>
-            </Col>
+              <Col xs={4}>
+                <AnimatedButton name="contact" timeout={50} style="text-center block"/>
+              </Col>
+              <Col xs={4}>
+                  <AnimatedButton name="about" timeout={1000} style="text-center two"/>
+                  <AnimatedButton name="testimonials" timeout={1500} style="text-center four"/>
+              </Col>
+              <Col xs={4}>
+                  <AnimatedButton name="work" timeout={2000} style="text-center three"/>
+                  <AnimatedButton name="blog" timeout={2500} style="text-center five" link={true}/>
+              </Col>
           </Row>
       </Grid>
     );
