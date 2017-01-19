@@ -6,6 +6,7 @@ import { Link } from 'react-router'
 import { connect, getState } from 'react-redux'
 import { sampleOne, sampleTwo, watchUserChange, login, signout, getTest, postTest} from '../../redux/actions'
 import Navbarcomp from '../navbar/navbar.jsx'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 class Index extends React.Component {
 
@@ -20,7 +21,8 @@ class Index extends React.Component {
       emailLogin: null,
       passwordLogin: null,
       title: "{CONOR MACKEN}",
-      subTitle: "Full Stack JS Developer"
+      subTitle: "Full Stack JS Developer",
+      contactLinkText: "Contact"
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -71,15 +73,29 @@ class Index extends React.Component {
           </Row>
           <Row className="marginTop">
             <Col xs={4}>
-              <h3 className="text-center block">Contact</h3>
+              <ReactCSSTransitionGroup transitionName="contact" transitionAppear={true} transitionAppearTimeout={1500} transitionEnter={false} transitionLeave={false}>
+                  <h3 key={this.state.contactLinkText} className="text-center block">{this.state.contactLinkText}</h3>
+              </ReactCSSTransitionGroup>
             </Col>
             <Col xs={4}>
-              <h3 className="text-center two">About</h3>
-              <h3 className="text-center four">Testimonials</h3>
+              <ReactCSSTransitionGroup transitionName="about" transitionAppear={true} transitionAppearTimeout={3000} transitionEnter={false} transitionLeave={false}>
+                  <h3 className="text-center two">About</h3>
+              </ReactCSSTransitionGroup>
+              <ReactCSSTransitionGroup transitionName="testimonials" transitionAppear={true} transitionAppearTimeout={2500} transitionEnter={false} transitionLeave={false}>
+                  <h3 className="text-center four">Testimonials</h3>
+              </ReactCSSTransitionGroup>
             </Col>
             <Col xs={4}>
-              <h3 className="text-center three">Work</h3>
-              <h3 className="text-center five">Blog</h3>
+              <ReactCSSTransitionGroup transitionName="work" transitionAppear={true} transitionAppearTimeout={3000} transitionEnter={false} transitionLeave={false}>
+                  <h3 className="text-center three">Work</h3>
+              </ReactCSSTransitionGroup>
+              <ReactCSSTransitionGroup transitionName="blog" transitionAppear={true} transitionAppearTimeout={3500} transitionEnter={false} transitionLeave={false}>
+                <div>
+                  <a href="http://conormacken.com/blog">
+                    <h3 className="text-center five">Blog</h3>
+                  </a>
+                </div>
+              </ReactCSSTransitionGroup>
             </Col>
           </Row>
       </Grid>
