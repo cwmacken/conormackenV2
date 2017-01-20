@@ -7,6 +7,37 @@ import { connect, getState } from 'react-redux'
 import { sampleOne, sampleTwo, watchUserChange, login, signout, getTest, postTest} from '../../redux/actions'
 import Navbarcomp from '../navbar/navbar.jsx'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import { zoomIn, slideInRight, slideInDown, fadeInDownBig } from 'react-animations';
+import { StyleSheet, css } from 'aphrodite';
+
+const styles = StyleSheet.create({
+  mainHeader: {
+    animationName: fadeInDownBig,
+    animationDuration: '1.25s',
+    'text-align': 'center',
+    'font-size': '9.6rem',
+    color: '#333',
+    'text-transform': 'uppercase',
+    'letter-spacing': '.1em',
+    'font-weight': '300',
+    'font-family': '-apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
+    'line-height': '1.5'
+  },
+  subHeader: {
+    animationName: slideInRight,
+    animationDuration: '2.5s',
+    'text-align': 'center',
+    'font-size': '2rem',
+    'text-transform': 'uppercase',
+    color: '#777',
+    'letter-spacing': '.1em',
+    'font-weight': '300',
+    'line-height': '1.5',
+    'font-family': '-apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
+    'margin-top': '7px'
+
+  }
+})
 
 var AnimatedButton = React.createClass({
 
@@ -62,6 +93,8 @@ class Index extends React.Component {
       emailLogin: null,
       passwordLogin: null,
       title: "{CONOR MACKEN}",
+      leftBracket: "{",
+      rightBracket: "}",
       subTitle: "Full Stack JS Developer",
       contactLinkText: "",
       items:[]
@@ -104,12 +137,12 @@ class Index extends React.Component {
       <Grid>
           <Row>
               <Col className="mainHeaderPadding" xs={12} >
-                  <h1 className="text-center mainHeader">{this.state.title}</h1>
+                <h3 className={css(styles.mainHeader)} >{this.state.title}</h3>
               </Col>
           </Row>
           <Row>
               <Col xs={12} >
-                  <h2 className="text-center subHeader">{this.state.subTitle}</h2>
+                  <h2 className={css(styles.subHeader)}>{this.state.subTitle}</h2>
               </Col>
           </Row>
           <Row className="marginTop">
