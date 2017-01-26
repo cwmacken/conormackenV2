@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Index from './components/index/index.jsx';
-import Signup from './components/signup/signup.jsx';
 import Contact from './components/contact/contact.jsx';
 import Error from './components/error/error.jsx'
 import { Router, Route, Link, browserHistory, IndexRoute} from 'react-router'
