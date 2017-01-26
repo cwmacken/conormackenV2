@@ -9,6 +9,7 @@ import Navbarcomp from '../navbar/navbar.jsx'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { zoomIn, slideInRight, slideInDown, fadeInDownBig } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
+import EmailCatcher from '../emailCatcher/emailCatcher.jsx'
 
 const styles = StyleSheet.create({
   mainHeader: {
@@ -21,7 +22,8 @@ const styles = StyleSheet.create({
     'letter-spacing': '.1em',
     'font-weight': '300',
     'font-family': '-apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
-    'line-height': '1.5'
+    'line-height': '1.5',
+    overflow: 'hidden'
   },
   subHeader: {
     animationName: slideInRight,
@@ -70,9 +72,13 @@ var AnimatedButton = React.createClass({
         )
       }else{
         return (
-            <ReactCSSTransitionGroup transitionName={this.props.name} transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
-                <h3 key={this.props.name} className={this.props.style}>{this.props.name}</h3>
-            </ReactCSSTransitionGroup>
+            <Link to={this.props.url}>
+              <ReactCSSTransitionGroup transitionName={this.props.name} transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
+
+                    <h3 key={this.props.name} className={this.props.style}>{this.props.name}</h3>
+
+              </ReactCSSTransitionGroup>
+            </Link>
         )
       }
     }
@@ -147,7 +153,7 @@ class Index extends React.Component {
           </Row>
           <Row className="marginTop">
               <Col xs={4}>
-                <AnimatedButton name="contact" timeout={50} style="text-center block"/>
+                <AnimatedButton name="contact" timeout={50} style="text-center block" url="/contact"/>
               </Col>
               <Col xs={4}>
                   <AnimatedButton name="about" timeout={1000} style="text-center two"/>
@@ -158,6 +164,7 @@ class Index extends React.Component {
                   <AnimatedButton name="blog" timeout={2500} style="text-center five" link={true}/>
               </Col>
           </Row>
+          <EmailCatcher />
       </Grid>
     );
   }

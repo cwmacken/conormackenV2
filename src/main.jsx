@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Index from './components/index/index.jsx';
 import Signup from './components/signup/signup.jsx';
+import Contact from './components/contact/contact.jsx';
 import Error from './components/error/error.jsx'
 import { Router, Route, Link, browserHistory, IndexRoute} from 'react-router'
 import { createStore, applyMiddleware } from 'redux'
@@ -25,13 +26,12 @@ const App = React.createClass({
   }
 })
 
-
 ReactDOM.render((
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={Index}/>
-        <Route path="/signup" component={Signup}/>
+        <Route path="/contact" component={Contact}/>
         <Route path="*" component={Error}/>
       </Route>
     </Router>
