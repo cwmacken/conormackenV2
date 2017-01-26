@@ -1,15 +1,13 @@
 import React from 'react';
 require("./index.less")
 import { Button, Grid, Row, Col  } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap'
 import { Link } from 'react-router'
-import { connect, getState } from 'react-redux'
-import { sampleOne, sampleTwo, watchUserChange, login, signout, getTest, postTest} from '../../redux/actions'
-import Navbarcomp from '../navbar/navbar.jsx'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import { zoomIn, slideInRight, slideInDown, fadeInDownBig } from 'react-animations';
+import { slideInRight, fadeInDownBig } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
 import EmailCatcher from '../emailCatcher/emailCatcher.jsx'
+import AnimatedButton from '../animatedButton/animatedButton.jsx'
+import HeaderText from '../headerText/headerText.jsx'
 
 const styles = StyleSheet.create({
   mainHeader: {
@@ -41,101 +39,15 @@ const styles = StyleSheet.create({
   }
 })
 
-var AnimatedButton = React.createClass({
-
-  componentWillMount(){
-    console.log(this.props)
-    this.setState({loading: true})
-  },
-  componentDidMount() {
-    var self = this;
-    setTimeout(() => {
-      self.setState({loading: false});
-    }, self.props.timeout);
-  },
-  render: function() {
-
-    if (this.state.loading) {
-        return (
-          <div />
-        )
-    } else {
-      if(this.props.link){
-        return (
-            <ReactCSSTransitionGroup transitionName={this.props.name} transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
-              <div>
-                <a target="_blank" href="http://conormacken.com/blog">
-                    <h3 key={this.props.name} className={this.props.style}>{this.props.name}</h3>
-                </a>
-              </div>
-            </ReactCSSTransitionGroup>
-        )
-      }else{
-        return (
-            <Link to={this.props.url}>
-              <ReactCSSTransitionGroup transitionName={this.props.name} transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
-
-                    <h3 key={this.props.name} className={this.props.style}>{this.props.name}</h3>
-
-              </ReactCSSTransitionGroup>
-            </Link>
-        )
-      }
-    }
-  }
-
-});
-
 class Index extends React.Component {
 
   constructor(props) {
     super(props);
 
+    // TODO: change this to props
     this.state = {
-      value: this.props.name,
-      email: null,
-      passwordOne: null,
-      passwordTwo: null,
-      emailLogin: null,
-      passwordLogin: null,
-      title: "{CONOR MACKEN}",
-      leftBracket: "{",
-      rightBracket: "}",
       subTitle: "Full Stack JS Developer",
-      contactLinkText: "",
-      items:[]
     };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-
-
-
-    this.handleChangeEmailLogin= this.handleChangeEmailLogin.bind(this);
-    this.handleChangePasswordLogin = this.handleChangePasswordLogin.bind(this);
-    this.login = this.login.bind(this);
-
-    this.props.watchUserChange();
-  }
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(){
-    this.props.handleSubmit(this.state)
-  }
-
-  handleChangeEmailLogin(event){
-    this.setState({emailLogin: event.target.value});
-  }
-
-  handleChangePasswordLogin(event){
-    this.setState({passwordLogin: event.target.value});
-  }
-
-  login(){
-    this.props.login(this.state)
   }
 
   render() {
@@ -143,7 +55,7 @@ class Index extends React.Component {
       <Grid>
           <Row>
               <Col className="mainHeaderPadding" xs={12} >
-                <h3 className={css(styles.mainHeader)} >{this.state.title}</h3>
+                <HeaderText title="{Conor Macken}" />
               </Col>
           </Row>
           <Row>
@@ -170,47 +82,4 @@ class Index extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    number: state.sampleOne.num,
-    name: state.sampleTwo.name,
-    auth: state.auth,
-    endpoint: state.endpoint
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onButtonClick: (e) => {
-      dispatch(sampleOne())
-    },
-    handleSubmit: (state) => {
-      dispatch(sampleTwo(state.value))
-    },
-    createAccount: (state) => {
-      dispatch(attemptLogin(state.email, state.passwordOne))
-    },
-    login: (state) => {
-      dispatch(login(state.emailLogin, state.passwordLogin))
-    },
-    signout: () => {
-      dispatch(signout())
-    },
-    watchUserChange: () =>{
-      dispatch(watchUserChange())
-    },
-    getTest: () => {
-      dispatch(getTest())
-    },
-    postTest: () => {
-      dispatch(postTest())
-    }
-  }
-}
-
-const App = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Index)
-
-export default App
+export default Index
