@@ -27,7 +27,7 @@ class AnimatedButton extends React.Component {
         return (
             <ReactCSSTransitionGroup transitionName={this.props.name} transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
               <div>
-                <a target="_blank" href="http://conormacken.com/blog">
+                <a target={this.props.target} href={this.props.url}>
                     <h3 key={this.props.name} className={this.props.style}>{this.props.name}</h3>
                 </a>
               </div>
