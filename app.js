@@ -61,6 +61,7 @@ if (isDeveloping) {
 
 var server = app.listen(app.get('port'), function() {
     console.log('Express server listening on port ' + server.address().port);
+    config.setContactFormEmail();
 });
 
 module.exports = app;

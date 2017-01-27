@@ -5,6 +5,7 @@ var https = require('https');
 var http = require('http');
 var firebase = require("firebase");
 var request = require('request');
+var nodemailer = require('nodemailer');
 
 // GET /server/data
 router.get('/data', function(req, res){
