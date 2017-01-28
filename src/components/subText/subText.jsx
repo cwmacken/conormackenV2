@@ -24,7 +24,9 @@ export default class EmailCatcher extends React.Component {
   render() {
     return (
       <div>
-        <h2 className={css(styles.subHeader)}>{this.props.title}</h2>
+          <h2 className={css(styles.subHeader)}>
+            {this.props.title}
+          </h2>
       </div>
     );
   }

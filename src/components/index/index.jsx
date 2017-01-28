@@ -8,6 +8,7 @@ import { StyleSheet, css } from 'aphrodite';
 import EmailCatcher from '../emailCatcher/emailCatcher.jsx'
 import AnimatedButton from '../animatedButton/animatedButton.jsx'
 import HeaderText from '../headerText/headerText.jsx'
+import SubHeaderText from '../subText/subText.jsx'
 
 const styles = StyleSheet.create({
   mainHeader: {
@@ -60,7 +61,7 @@ class Index extends React.Component {
           </Row>
           <Row>
               <Col xs={12} >
-                  <h2 className={css(styles.subHeader)}>{this.state.subTitle}</h2>
+                <SubHeaderText title="Full Stack JS Developer"/>
               </Col>
           </Row>
           <Row className="marginTop">
