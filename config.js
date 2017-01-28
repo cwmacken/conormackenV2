@@ -20,10 +20,6 @@ config.env = {
 
 config.env[currentEnv] = true;
 
-config.firebase = {
-  apiKey: "AIzaSyBDugxOr0kCfZ6Vxn4JQomt4uB-0W1SE88",
-  authDomain: "carneasada-f0617.firebaseapp.com"
-}
 
 config.email = {
   account: null,
@@ -33,7 +29,7 @@ config.email = {
 config.setContactFormEmail = function(){
 
   // TODO: consider making a proc file
-  
+
   if(currentEnv === 'production'){
 
     rl.question('Please enter your email:', (email) => {
