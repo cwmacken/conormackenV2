@@ -4,6 +4,7 @@ require("./contact.less")
 import { connect, getState } from 'react-redux'
 import { Button, Grid, Row, Col } from 'react-bootstrap';
 import AnimatedButton from '../animatedButton/animatedButton.jsx'
+import ContactForm from '../contactForm/contactForm.jsx'
 import HeaderText from '../headerText/headerText.jsx'
 import SubHeaderText from '../subText/subText.jsx'
 
@@ -24,21 +25,28 @@ class Contact extends React.Component {
           </Row>
           <Row>
               <Col xs={12} >
-                  <SubHeaderText title="hello@conormacken.com"/>
+                  <a href="mailto:hello@conormacken.com">
+                    <SubHeaderText title="hello@conormacken.com"/>
+                  </a>
               </Col>
           </Row>
           <Row className="marginTop">
               <Col xs={4}>
-                <AnimatedButton name="linkedin" timeout={50} style="text-center block" link={true} target="_blank" url="https://www.linkedin.com/in/cmackendev"/>
+                <AnimatedButton name="linkedin" timeout={50} style="text-center two" link={true} target="_blank" url="https://www.linkedin.com/in/cmackendev"/>
               </Col>
               <Col xs={4}>
                   <AnimatedButton name="github" timeout={1000} style="text-center two" link={true} target="_blank" url="https://github.com/cwmacken"/>
-                  <AnimatedButton name="email" timeout={1500} style="text-center four" link={true}  url="mailto:hello@conormacken.com"/>
               </Col>
               <Col xs={4}>
-                  <AnimatedButton name="contact form" timeout={2000} style="text-center three"/>
-                  <AnimatedButton name="twitter" timeout={2500} style="text-center five" link={true} target="_blank" url="https://twitter.com/ConorMacken"/>
+                  <AnimatedButton name="twitter" timeout={1500} style="text-center two" link={true} target="_blank" url="https://twitter.com/ConorMacken"/>
               </Col>
+
+          </Row>
+          <Row>
+            <Col xsOffset={2} xs={8}>
+              <ContactForm name="contact form" timeout={2000} style="text-center three"/>
+            </Col>
+
           </Row>
       </Grid>
     );
