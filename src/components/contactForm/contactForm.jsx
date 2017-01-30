@@ -19,9 +19,12 @@ class ContactForm extends React.Component {
   componentWillMount(){
     this.setState({
       loading: true,
+      sent: false,
       name:'',
       email:'',
-      message: ''
+      message: '',
+      error: false,
+      errorMsg: ''
     })
   }
 
@@ -32,33 +35,23 @@ class ContactForm extends React.Component {
     }, self.props.timeout);
   }
 
-
-  // getValidationState() {
-  //   const length = this.state.value.length;
-  //   if (length > 10) return 'success';
-  //   else if (length > 5) return 'warning';
-  //   else if (length > 0) return 'error';
-  // }
-
   handleName(e) {
-    console.log("name", e.target.value)
     this.setState({ name: e.target.value });
   }
 
   handleEmail(e) {
-    console.log("email", e.target.value)
     this.setState({ email: e.target.value });
   }
 
   handleMessage(e) {
-    console.log("message", e.target.value)
     this.setState({ message: e.target.value });
   }
 
   submit(){
     // TODO: need to have validation here
-    console.log("clicked ")
-    console.log(this.state)
+    // TODO: test for errors
+
+    var self = this;
 
     axios.post('/server/contactform', {
       name: this.state.name,
@@ -66,56 +59,63 @@ class ContactForm extends React.Component {
       message: this.state.message
     })
     .then(function (response) {
-      console.log(response);
+      if(response.status === 200){
+        if(response.data.response === false){
+          self.setState({ error: true, errorMsg: "Sorry something broke, please send a email directly to hello@conormacken.com"});
+        }else{
+          self.setState({sent: true});
+        }
+      }
     })
     .catch(function (error) {
-      console.log(error);
+      self.setState({ error: true, errorMsg: error});
     });
   }
 
   render() {
     if (this.state.loading) {
-        console.log("loading",this.props.name)
         return (
           <div />
         )
-    } else {
-      console.log("done loading", this.props.name)
+    } else if(!this.state.loading){
 
-        return (
-
-              <ReactCSSTransitionGroup transitionName={this.props.name} transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
-                    <form>
-                      <FormGroup
-                        controlId="formBasicText"
-                      >
-                        <h3 className="formLabel text-center">Please get in touch!</h3>
-                        <FormControl
-                          type="text"
-                          placeholder="Name"
-                          onChange={this.handleName}
-                        />
-                        <FormControl
-                          type="text"
-                          placeholder="Email"
-                          onChange={this.handleEmail}
-                        />
-                        <FormControl
-                          type="text"
-                          componentClass="textarea"
-                          placeholder="Message"
-                          onChange={this.handleMessage}
-                        />
-                      </FormGroup>
-
-                    </form>
-                    <Button onClick={this.submit}type="submit">
-                      Submit
-                    </Button>
-              </ReactCSSTransitionGroup>
-
-        )
-
+        if(this.state.sent){
+          return(
+            <h3 className="formLabel text-center">Thanks! I'll be in contact shortly!</h3>
+          )
+        }else{
+          return (
+                <ReactCSSTransitionGroup transitionName={this.props.name} transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
+                      <form>
+                        <FormGroup
+                          controlId="formBasicText"
+                        >
+                          <h3 className="formLabel text-center">Please get in touch!</h3>
+                          <h3 className="formLabel text-center dangerText">{this.state.errorMsg}</h3>
+                          <FormControl
+                            type="text"
+                            placeholder="Name"
+                            onChange={this.handleName}
+                          />
+                          <FormControl
+                            type="text"
+                            placeholder="Email"
+                            onChange={this.handleEmail}
+                          />
+                          <FormControl
+                            type="text"
+                            componentClass="textarea"
+                            placeholder="Message"
+                            onChange={this.handleMessage}
+                          />
+                        </FormGroup>
+                      </form>
+                      <Button onClick={this.submit}type="submit">
+                        Submit
+                      </Button>
+                </ReactCSSTransitionGroup>
+          )
+        }
     }
   }
 }

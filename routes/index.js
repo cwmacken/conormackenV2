@@ -51,12 +51,14 @@ function handleSayHello(req, res) {
             }
         });
 
-        var text = 'Test hola';
+        var email = req.body.email + ', hello@conormacken.com';
+
+        var text = 'Message from '+ req.body.name+': \r\n'+req.body.message;
 
         var mailOptions = {
             from: 'hello@conormacken.com', // sender address
-            to: 'cwmacken@gmail.com', // list of receivers
-            subject: 'Test Email', // Subject line
+            to: email, // list of receivers
+            subject: 'Hola! from ' + req.body.name, // Subject line
             text: text //, // plaintext body
         };
 

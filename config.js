@@ -29,6 +29,7 @@ config.email = {
 config.setContactFormEmail = function(){
 
   // TODO: consider making a proc file
+  // TODO: change to plain test password this is a joke 
 
   if(currentEnv === 'production'){
 
