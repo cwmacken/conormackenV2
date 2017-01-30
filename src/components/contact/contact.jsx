@@ -32,19 +32,19 @@ class Contact extends React.Component {
           </Row>
           <Row className="marginTop">
               <Col xs={4}>
-                <AnimatedButton name="linkedin" timeout={50} style="text-center two" link={true} target="_blank" url="https://www.linkedin.com/in/cmackendev"/>
+                <AnimatedButton trans="contact" name="linkedin" timeout={50} style="text-center two" link={true} target="_blank" url="https://www.linkedin.com/in/cmackendev"/>
               </Col>
               <Col xs={4}>
-                  <AnimatedButton name="github" timeout={1000} style="text-center two" link={true} target="_blank" url="https://github.com/cwmacken"/>
+                  <AnimatedButton trans="contact" name="github" timeout={1000} style="text-center two" link={true} target="_blank" url="https://github.com/cwmacken"/>
               </Col>
               <Col xs={4}>
-                  <AnimatedButton name="twitter" timeout={1500} style="text-center two" link={true} target="_blank" url="https://twitter.com/ConorMacken"/>
+                  <AnimatedButton trans="contact" name="twitter" timeout={1500} style="text-center two" link={true} target="_blank" url="https://twitter.com/ConorMacken"/>
               </Col>
 
           </Row>
           <Row>
             <Col xsOffset={2} xs={8}>
-              <ContactForm name="contact form" timeout={2000} style="text-center three"/>
+              <ContactForm trans="contact" name="contact form" timeout={2000} style="text-center three"/>
             </Col>
 
           </Row>

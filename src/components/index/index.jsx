@@ -66,15 +66,15 @@ class Index extends React.Component {
           </Row>
           <Row className="marginTop">
               <Col xs={4}>
-                <AnimatedButton name="contact" timeout={50} style="text-center block" url="/contact"/>
+                <AnimatedButton trans="home" name="contact" timeout={50} style="text-center block" url="/contact"/>
               </Col>
               <Col xs={4}>
-                  <AnimatedButton name="about" timeout={1000} style="text-center two"/>
-                  <AnimatedButton name="testimonials" timeout={1500} style="text-center four"/>
+                  <AnimatedButton trans="home" name="about" timeout={1000} style="text-center two"/>
+                  <AnimatedButton trans="home" name="testimonials" timeout={1500} style="text-center four"/>
               </Col>
               <Col xs={4}>
-                  <AnimatedButton name="work" timeout={2000} style="text-center three"/>
-                  <AnimatedButton name="blog" timeout={2500} style="text-center five" link={true} target="_blank" url="http://conormacken.com/blog"/>
+                  <AnimatedButton trans="home" name="work" timeout={2000} style="text-center three"/>
+                  <AnimatedButton trans="home" name="blog" timeout={2500} style="text-center five" link={true} target="_blank" url="http://conormacken.com/blog"/>
               </Col>
           </Row>
           <EmailCatcher />

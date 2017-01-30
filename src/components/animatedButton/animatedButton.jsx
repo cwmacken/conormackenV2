@@ -24,7 +24,7 @@ class AnimatedButton extends React.Component {
     } else {
       if(this.props.link){
         return (
-            <ReactCSSTransitionGroup transitionName={this.props.name} transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
+            <ReactCSSTransitionGroup transitionName={this.props.trans} transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
               <div>
                 <a target={this.props.target} href={this.props.url}>
                     <h3 key={this.props.name} className={this.props.style}>{this.props.name}</h3>
@@ -35,7 +35,7 @@ class AnimatedButton extends React.Component {
       }else{
         return (
             <Link to={this.props.url}>
-              <ReactCSSTransitionGroup transitionName={this.props.name} transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
+              <ReactCSSTransitionGroup transitionName={this.props.trans} transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
 
                     <h3 key={this.props.name} className={this.props.style}>{this.props.name}</h3>
 
