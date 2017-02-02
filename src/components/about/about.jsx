@@ -7,7 +7,7 @@ class About extends React.Component {
   render() {
     return (
       <Grid>
-        <Nav/>
+        <Nav ignore="about"/>
         About
       </Grid>
     );

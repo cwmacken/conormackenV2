@@ -19,7 +19,7 @@ class Contact extends React.Component {
     return (
 
       <Grid>
-          <Nav/>
+          <Nav ignore="contact"/>
           <Row>
               <Col className="mainHeaderPadding" xs={12} >
                 <HeaderText title="{Contact}"/>

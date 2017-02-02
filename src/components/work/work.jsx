@@ -7,7 +7,7 @@ class Work extends React.Component {
   render() {
     return (
       <Grid>
-        <Nav/>
+        <Nav ignore="work"/>
         Work
       </Grid>
     );

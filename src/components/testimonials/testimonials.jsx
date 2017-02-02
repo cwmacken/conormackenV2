@@ -7,7 +7,7 @@ class Testimonials extends React.Component {
   render() {
     return (
       <Grid>
-        <Nav/>
+        <Nav ignore="testimonials"/>
         Testimonials
       </Grid>
     );
