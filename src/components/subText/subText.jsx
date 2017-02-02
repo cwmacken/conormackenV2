@@ -1,10 +1,10 @@
 import React from 'react';
-import { zoomIn, slideInRight, slideInLeft, fadeInDownBig } from 'react-animations';
+import { fadeInRightBig } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
 
 const styles = StyleSheet.create({
   subHeader: {
-    animationName: slideInRight,
+    animationName: fadeInRightBig,
     animationDuration: '2.5s',
     'text-align': 'center',
     'font-size': '2rem',

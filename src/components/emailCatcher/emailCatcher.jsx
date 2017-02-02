@@ -1,6 +1,6 @@
 import React from 'react';
 require("./emailCatcher.less")
-import { zoomIn, slideInRight, slideInLeft, fadeInDownBig } from 'react-animations';
+import { fadeInLeftBig } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
 
 const styles = StyleSheet.create({
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 
   },
   input: {
-    animationName: slideInLeft,
+    animationName: fadeInLeftBig,
     animationDuration: '2.5s',
   }
 })
