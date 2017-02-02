@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
 
 
 export default class EmailCatcher extends React.Component {
+  // TODO: maybe add in fade in here
   render() {
     return (
       <div>
