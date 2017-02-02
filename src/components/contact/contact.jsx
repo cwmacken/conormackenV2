@@ -7,6 +7,7 @@ import AnimatedButton from '../animatedButton/animatedButton.jsx'
 import ContactForm from '../contactForm/contactForm.jsx'
 import HeaderText from '../headerText/headerText.jsx'
 import SubHeaderText from '../subText/subText.jsx'
+import Nav from '../nav/nav.jsx'
 
 class Contact extends React.Component {
 
@@ -18,6 +19,7 @@ class Contact extends React.Component {
     return (
 
       <Grid>
+          <Nav/>
           <Row>
               <Col className="mainHeaderPadding" xs={12} >
                 <HeaderText title="{Contact}"/>
