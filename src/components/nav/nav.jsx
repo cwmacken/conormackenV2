@@ -6,7 +6,7 @@ import { Button, Grid, Row, Col  } from 'react-bootstrap';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 require("./nav.less")
 
-var buttons = [
+const buttons = [
   {
     title: 'home',
     internalLink: true,
@@ -55,7 +55,6 @@ export default class Navbarcomp extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {buttonData: buttons};
     this.generatedButtons = this.generatedButtons.bind(this);
   }
 
