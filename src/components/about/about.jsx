@@ -2,7 +2,6 @@ import React from 'react';
 import Nav from '../nav/nav.jsx'
 import { Button, Grid, Row, Col  } from 'react-bootstrap';
 import HeaderText from '../headerText/headerText.jsx'
-import SubHeaderText from '../subText/subText.jsx'
 require("./about.less")
 
 const facts = [
@@ -10,7 +9,7 @@ const facts = [
   'Former Directv DLAB (Directv’s R&D lab) developer.',
   'All of my work at DLAB was prototype based; hacking set top boxes running old versions of Web Kit, working with distributed Raspberry Pis and toying with odd TVOS’s still in their infancy, anything that got the job done.',
   'I pride myself on being the able to figure out the hard problems.',
-  'I love helping grow businesses.',
+  'I love helping businesses grow.',
   'At DLAB I was commonly the go between for the technical team to other teams.',
   'I can explain that why your technical decision is wrong but give you workable alternatives.',
   'Data is important.',
@@ -27,13 +26,12 @@ const facts = [
 ]
 
 class About extends React.Component {
-  // TODO: change animation
 
+  // TODO: change animation
   constructor(props) {
     super(props);
     this.populate = this.populate.bind(this);
   }
-
 
   populate(){
     const populatedDom = facts.map((fact,i) => {
@@ -46,6 +44,7 @@ class About extends React.Component {
 
     return(populatedDom)
   }
+
   render() {
     return (
       <Grid>
