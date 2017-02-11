@@ -3,9 +3,18 @@ import Nav from '../nav/nav.jsx'
 import { Button, Grid, Row, Col  } from 'react-bootstrap';
 import HeaderText from '../headerText/headerText.jsx'
 require("./about.less")
+import { fadeIn} from 'react-animations';
+import { StyleSheet, css } from 'aphrodite';
+
+const styles = StyleSheet.create({
+  fadeIn: {
+    animationName: fadeIn,
+    animationDuration: '2.5s'
+  },
+})
 
 const facts = [
-  'I mostly work in JS ( Node / React ), I also have a some experience with Python and Swift.',
+  'I mostly work in JS ( Node / React ), I also have a some limited experience with Python and Swift.',
   'Former Directv DLAB (Directv’s R&D lab) developer.',
   'All of my work at DLAB was prototype based; hacking set top boxes running old versions of Web Kit, working with distributed Raspberry Pis and toying with odd TVOS’s still in their infancy, anything that got the job done.',
   'I pride myself on being the able to figure out the hard problems.',
@@ -28,7 +37,7 @@ const facts = [
 class About extends React.Component {
 
   // TODO: Add fade in
-  
+
   constructor(props) {
     super(props);
     this.populate = this.populate.bind(this);
@@ -56,7 +65,7 @@ class About extends React.Component {
             </Col>
         </Row>
         <Row>
-          <Col xsOffset={2} xs={8}>
+          <Col className={css(styles.fadeIn)} xsOffset={2} xs={8}>
             {this.populate()}
           </Col>
         </Row>
