@@ -61,11 +61,11 @@ class About extends React.Component {
         <Nav ignore="about"/>
         <Row>
             <Col className="mainHeaderPadding" xs={12} >
-              <HeaderText title="{About}"/>
+              <HeaderText title="{About}" style="headerText"/>
             </Col>
         </Row>
         <Row>
-          <Col className={css(styles.fadeIn)} xsOffset={2} xs={8}>
+          <Col className={css(styles.fadeIn)} xsOffset={0} xs={12} smOffset={2} sm={8}>
             {this.populate()}
           </Col>
         </Row>

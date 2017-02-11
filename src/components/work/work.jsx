@@ -70,10 +70,10 @@ class Work extends React.Component {
   render() {
     return (
       <Grid>
-        <Nav ignore="work"/>
+        <Nav ignore="work" />
         <Row>
             <Col className="mainHeaderPadding" xs={12} >
-              <HeaderText title="{Work}"/>
+              <HeaderText title="{Work}" style="headerText"/>
             </Col>
         </Row>
         {this.generatedExampleUnits()}

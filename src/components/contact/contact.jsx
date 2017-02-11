@@ -22,7 +22,7 @@ class Contact extends React.Component {
           <Nav ignore="contact"/>
           <Row>
               <Col className="mainHeaderPadding" xs={12} >
-                <HeaderText title="{Contact}"/>
+                <HeaderText title="{Contact}" style="headerText"/>
               </Col>
           </Row>
           <Row>
@@ -33,20 +33,20 @@ class Contact extends React.Component {
               </Col>
           </Row>
           <Row className="marginTop">
-              <Col xs={4}>
-                <AnimatedButton trans="contact" name="linkedin" timeout={50} style="text-center two" link={true} target="_blank" url="https://www.linkedin.com/in/cmackendev"/>
+              <Col xs={12} sm={4} >
+                <AnimatedButton trans="contact" name="linkedin" timeout={50} style="text-center btnTwo" link={true} target="_blank" url="https://www.linkedin.com/in/cmackendev"/>
               </Col>
-              <Col xs={4}>
-                  <AnimatedButton trans="contact" name="github" timeout={1000} style="text-center two" link={true} target="_blank" url="https://github.com/cwmacken"/>
+              <Col xs={12} sm={4} >
+                  <AnimatedButton trans="contact" name="github" timeout={1000} style="text-center btnTwo" link={true} target="_blank" url="https://github.com/cwmacken"/>
               </Col>
-              <Col xs={4}>
-                  <AnimatedButton trans="contact" name="twitter" timeout={1500} style="text-center two" link={true} target="_blank" url="https://twitter.com/ConorMacken"/>
+              <Col xs={12} sm={4} >
+                  <AnimatedButton trans="contact" name="twitter" timeout={1500} style="text-center btnTwo" link={true} target="_blank" url="https://twitter.com/ConorMacken"/>
               </Col>
 
           </Row>
           <Row>
-            <Col xsOffset={2} xs={8}>
-              <ContactForm trans="contact" name="contact form" timeout={2000} style="text-center three"/>
+            <Col  xs={12} smOffset={2} sm={8}>
+              <ContactForm trans="contact" name="contact form" timeout={2000}/>
             </Col>
 
           </Row>

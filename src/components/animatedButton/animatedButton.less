@@ -1,3 +1,5 @@
+@import "../../assets/baseStyles/base.less";
+
 .home-appear {
   width: 0px;
 }
@@ -18,12 +20,115 @@
   transition-timing-function: ease-in;
 }
 
-a{
-  color: white;
+// TODO: move up to main?
+a, a:hover, a:visited{
+  color: @secondaryColor;
   text-decoration: none;
 }
 
-a:hover, a:visited{
-  color: white;
-  text-decoration: none;
+.btnBase{
+  background-color: @baseColor;
+  letter-spacing: .1em;
+  font-family: -apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: @secondaryColor;
+  border-radius: .25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.btnOne{
+  line-height: 2;
+  .btnBase
+}
+
+.btnTwo{
+  line-height: 2;
+  .btnBase
+}
+
+.btnFour{
+  line-height: 2;
+  .btnBase
+}
+
+.btnThree{
+  line-height: 2;
+  .btnBase
+}
+
+.btnFive{
+  line-height: 2;
+  .btnBase
+}
+
+
+
+
+// /* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+
+  .btnOne{
+    line-height: 11;
+    .btnBase
+  }
+
+  .btnTwo{
+    line-height: 5;
+    .btnBase
+  }
+
+  .btnFour{
+    line-height: 5;
+    .btnBase
+  }
+
+  .btnThree{
+    line-height: 8;
+    .btnBase
+  }
+
+  .btnFive{
+    line-height: 2;
+    .btnBase
+  }
+
+}
+//
+// /* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+
+  .btnOne{
+    line-height: 11;
+    .btnBase
+  }
+
+  .btnTwo{
+    line-height: 5;
+    .btnBase
+  }
+
+  .btnFour{
+    line-height: 5;
+    .btnBase
+  }
+
+  .btnThree{
+    line-height: 8;
+    .btnBase
+  }
+
+  .btnFive{
+    line-height: 2;
+    .btnBase
+  }
+
+}
+//
+// /* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
 }

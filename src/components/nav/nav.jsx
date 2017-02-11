@@ -5,47 +5,62 @@ import { Navbar, Nav, NavItem, Tabs, Tab  } from 'react-bootstrap';
 import { Button, Grid, Row, Col  } from 'react-bootstrap';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 require("./nav.less")
+var hamburger = require('../../assets/images/hamburger.png')
+
+// TODO: maybe make the nav an overlay 
+
+import { fadeIn, fadeOut } from 'react-animations';
+import { StyleSheet, css } from 'aphrodite';
+
+const styles = StyleSheet.create({
+  fadeIn: {
+    animationName: fadeIn,
+    animationDuration: '.5s'
+  },
+  fadeOut: {
+    animationName: fadeOut,
+    animationDuration: '.5s'
+  }
+})
+
+const mobileWidth = 12
+
+const ltWidth = 12
 
 const buttons = [
   {
     title: 'home',
     internalLink: true,
-    width: 2,
     href: '/',
-    offset: 1
+    offset: 1,
   },
   {
     title: 'contact',
     internalLink: true,
-    width: 2,
     href: '/contact',
     offset: 0
   },
   {
     title: 'about',
     internalLink: true,
-    width: 2,
     href: '/about',
     offset: 0
   },
   {
     title: 'testimonials',
     internalLink: true,
-    width: 2,
     href: '/testimonials',
     offset: 0
   },
   {
     title: 'work',
     internalLink: true,
-    width: 2,
     href: '/work',
     offset: 0
   },
   {
     title: 'blog',
     internalLink: false,
-    width: 2,
     href: 'http://conormacken.com/blog/',
     offset: 0
   },
@@ -56,6 +71,12 @@ export default class Navbarcomp extends React.Component {
   constructor(props) {
     super(props);
     this.generatedButtons = this.generatedButtons.bind(this);
+    this.mobileNavClicked = this.mobileNavClicked.bind(this);
+
+    this.state = {
+      mobileNavClass: "navBtn",
+      mobileAnimation: null
+    };
   }
 
   generatedButtons() {
@@ -68,17 +89,17 @@ export default class Navbarcomp extends React.Component {
 
              if(!button.internalLink){
                return(
-                 <Col xsOffset={button.offset} xs={button.width} key={i}>
+                 <Col className={this.state.mobileAnimation} xs={mobileWidth} mdOffset={button.offset} md={ltWidth} key={i}>
                    <a target="_blank" href={button.href}>
-                     <h3 className="navBtn" >{button.title}</h3>
+                     <h3 className={this.state.mobileNavClass} >{button.title}</h3>
                    </a>
                  </Col>
                )
              }else{
                return(
-                 <Col xsOffset={button.offset} xs={button.width} key={i}>
+                 <Col className={this.state.mobileAnimation} xs={mobileWidth} mdOffset={button.offset} md={ltWidth} key={i}>
                    <Link to={button.href}>
-                     <h3 className="navBtn" >{button.title}</h3>
+                     <h3 className={this.state.mobileNavClass} >{button.title}</h3>
                    </Link>
                  </Col>
                )
@@ -88,9 +109,24 @@ export default class Navbarcomp extends React.Component {
     return(generatedButtons)
   }
 
+  mobileNavClicked(){
+    var self = this;
+    if(this.state.mobileNavClass === 'navBtn'){
+      this.setState({mobileNavClass: 'navBtn mobileClicked', mobileAnimation: css(styles.fadeIn)})
+    }else{
+      this.setState({mobileNavClass: 'navBtn mobileClicked', mobileAnimation: css(styles.fadeOut)})
+      setTimeout(function(){ self.setState({mobileNavClass: 'navBtn', mobileAnimation: null}); }, 500);
+    }
+
+  }
+
   render() {
+
     return (
       <Row>
+        <Col xsOffset={0} xs={12}>
+          <h3 className="mobile" onClick={this.mobileNavClicked}><img src={hamburger}></img></h3>
+        </Col>
         {this.generatedButtons()}
       </Row>
     );

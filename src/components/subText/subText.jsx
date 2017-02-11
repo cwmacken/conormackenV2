@@ -1,20 +1,12 @@
 import React from 'react';
 import { fadeInRightBig } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
+require("./subText.less")
 
 const styles = StyleSheet.create({
   subHeader: {
     animationName: fadeInRightBig,
-    animationDuration: '2.5s',
-    'text-align': 'center',
-    'font-size': '2rem',
-    'text-transform': 'uppercase',
-    color: '#777',
-    'letter-spacing': '.1em',
-    'font-weight': '300',
-    'line-height': '1.5',
-    'font-family': '-apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
-    'margin-top': '7px'
+    animationDuration: '2.5s'
   }
 })
 
@@ -22,8 +14,8 @@ export default class SubText extends React.Component {
   // TODO: maybe add in fade in here
   render() {
     return (
-      <div>
-          <h2 className={css(styles.subHeader)}>
+      <div className={css(styles.subHeader)}>
+          <h2 className="subText">
             {this.props.title}
           </h2>
       </div>

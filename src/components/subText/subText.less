@@ -1,35 +1,27 @@
 @import "../../assets/baseStyles/base.less";
 
-.baseHeaderText{
+.baseSubText{
   text-align: center;
-  color: #333;
+
   text-transform: uppercase;
+  color: #777;
   letter-spacing: .1em;
   font-weight: 300;
-  font-family: -apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.5;
-  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  margin-top: 7px
 }
 
-.headerText{
-  font-size: 4.6rem;
-  .baseHeaderText;
-}
-
-.testimonialsOverride{
-  font-size: 3rem;
+.subText{
+  font-size: 1.5rem;
+  .baseSubText;
 }
 
 // /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
-
-  .headerText{
-    font-size: 9.6rem;
-    .baseHeaderText;
-  }
-
-  .testimonialsOverride{
-    font-size: 7.6rem;
+  .subText{
+    font-size: 2rem;
+    .baseSubText;
   }
 
 }

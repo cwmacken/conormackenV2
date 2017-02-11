@@ -44,7 +44,7 @@ class Testimonials extends React.Component {
         <Nav ignore="testimonials"/>
           <Row>
               <Col className="mainHeaderPadding" xs={12} >
-                <HeaderText title="{Testimonials}"/>
+                <HeaderText title="{Testimonials}" style="headerText testimonialsOverride"/>
               </Col>
           </Row>
         {this.generatedExampleUnits()}

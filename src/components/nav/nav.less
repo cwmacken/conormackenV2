@@ -1,14 +1,12 @@
-.blackText{
-  color: black;
-}
+@import "../../assets/baseStyles/base.less";
 
-.navBtn{
-  background-color: #378a9b;
+.navBtnBase{
+  background-color: @baseColor;;
   letter-spacing: .1em;
   font-weight: 300;
   line-height: 2;
   font-family: -apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: white;
+  color: @secondaryColor;
   border-radius: .25rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -17,5 +15,67 @@
   white-space: nowrap;
   overflow: hidden;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
+}
+
+.navBtn{
+  .navBtnBase;
+  display: none;
+}
+
+.mobile{
+  background-color: @baseColor;;
+  letter-spacing: .1em;
+  font-weight: 300;
+  line-height: 2;
+  font-family: -apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: @secondaryColor;
+  border-radius: .25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  font-size: 14px;
+}
+
+.mobileClicked{
+  display: block;
+}
+
+.mobile img{
+  width: 1.25em;
+}
+
+// /* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+
+
+
+}
+//
+// /* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+
+  .navBtn{
+    .navBtnBase;
+    display: block;
+  }
+
+  .mobile{
+    display: none;
+  }
+
+
+}
+//
+// /* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+  .navBtn{
+    font-size: 16px;
+    .navBtnBase;
+    display: block;
+  }
 }

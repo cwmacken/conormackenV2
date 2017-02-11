@@ -56,7 +56,7 @@ class Index extends React.Component {
       <Grid>
           <Row>
               <Col className="mainHeaderPadding" xs={12} >
-                <HeaderText title="{Conor Macken}" />
+                <HeaderText title="{Conor Macken}" style="headerText" />
               </Col>
           </Row>
           <Row>
@@ -65,16 +65,16 @@ class Index extends React.Component {
               </Col>
           </Row>
           <Row className="marginTop">
-              <Col xs={4}>
-                <AnimatedButton trans="home" name="contact" timeout={50} style="text-center block" url="/contact"/>
+              <Col xs={12} sm={4} >
+                <AnimatedButton trans="home" name="contact" timeout={50} style="text-center btnOne" url="/contact"/>
               </Col>
-              <Col xs={4}>
-                  <AnimatedButton trans="home" name="about" timeout={1000} style="text-center two" url="/about"/>
-                  <AnimatedButton trans="home" name="testimonials" timeout={1500} style="text-center four" url="/testimonials"/>
+              <Col xs={12} sm={4} >
+                  <AnimatedButton trans="home" name="about" timeout={1000} style="text-center btnTwo" url="/about"/>
+                  <AnimatedButton trans="home" name="testimonials" timeout={1500} style="text-center btnFour" url="/testimonials"/>
               </Col>
-              <Col xs={4}>
-                  <AnimatedButton trans="home" name="work" timeout={2000} style="text-center three" url="/work"/>
-                  <AnimatedButton trans="home" name="blog" timeout={2500} style="text-center five" link={true} target="_blank" url="http://conormacken.com/blog"/>
+              <Col xs={12} sm={4} >
+                  <AnimatedButton trans="home" name="work" timeout={2000} style="text-center btnThree" url="/work"/>
+                  <AnimatedButton trans="home" name="blog" timeout={2500} style="text-center btnFive" link={true} target="_blank" url="http://conormacken.com/blog"/>
               </Col>
           </Row>
           <EmailCatcher />
