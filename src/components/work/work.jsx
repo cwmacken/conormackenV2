@@ -4,25 +4,51 @@ import { Button, Grid, Row, Col, Panel  } from 'react-bootstrap';
 import HeaderText from '../headerText/headerText.jsx'
 import ExampleUnit from '../exampleUnit/exampleUnit.jsx'
 
+// TODO: change gitTitle and gitTitle to second title etc etc
+// TODO: maybe add alarmpi 
+
 const examples = [
   {
-    title: "Test Title",
-    content: "TEST TEST TEST Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    url: "https://www.google.com/",
-    linkTitle: "test link to work"
+    title: "DLAB",
+    content: "My home from 2014 till 2017. In short DLAB was Directv's R&D unit. I worked in internal prototype development where I did all kinds of weird and interesting things, from hacking a setup box to have a Instagram screen saver to influencing critical roadmap decisions 5-7 years out with state of the art UX findings. DLAB had its hands in everything, notably heavily influencing Directv NOW.",
+    url: "https://vimeo.com/58158671",
+    linkTitle: "DLAB in 60 Seconds",
+    gitTitle: "Dlab on Instagram",
+    gitUrl: "https://www.instagram.com/explore/locations/70680609/dlab-directv/"
   },
   {
-    title: "Example Work",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    url: "http://conormacken.com",
-    linkTitle: "Link to Work"
+    title: "Stokecast",
+    content: "Stokecast is surf forecasting site designed to give users the relevant data on current conditions, it's designed to be simple and straightforward. Stokecast is my personal ongoing project that I use to test new frameworks and try new things. I’m particularly proud of the cron job associated with pulling the daily tide graph.",
+    url: "http://stokecast.com/",
+    linkTitle: "Stokecast",
+    gitUrl: "https://github.com/cwmacken/stokecast3",
+    gitTitle: "Github Repo"
   },
   {
-    title: "Example Work 3",
-    content: "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    url: "http://conormacken.com",
-    linkTitle: "Link to Work 3"
-  }
+    title: "CorSurf",
+    content: "Corsurf needed to have their site redone in a tight deadline. We started the work in late September and had the redone site up running and tested by November 1st ; just in time for their Christmas rush. The redone site lead to increased sales and brand awareness which will help Corsurf well into the future.",
+    url: "https://www.corsurf.com/",
+    linkTitle: "corsurf.com",
+  },
+  {
+    title: "Conormacken.com",
+    content: "This site! Nothing crazy from a data standpoint but I feel the animations are pretty interesting. Also the contact form component and associated back end routes are something to look at as well.",
+    gitUrl: "https://github.com/cwmacken/conormackenV2",
+    gitTitle: "Github Repo"
+  },
+  {
+    title: "The Fin Store",
+    content: "The Fin Store is a Shopify based e-commerce site. Set up from scratch by your’s truly as a move into running business’s and not just building web apps. An ongoing project that I hope to grow in the next few years.",
+    url: "https://thefinstore.com/",
+    linkTitle: "The Fin Store",
+  },
+  {
+    title: "Carne Asada Boilerplate",
+    content: "A boilerplate I set up with all the new fancy JS tools but setup for simple implementation and deployment. Designed to allow me to implement site quickly and efficiently with minimal set up and maximum concept validation. An ongoing project. Built with React, Redux, Node, Express, Firebase.",
+    url: "https://github.com/cwmacken/carne-asada",
+    linkTitle: "Github Repo",
+  },
+
 ]
 
 class Work extends React.Component {

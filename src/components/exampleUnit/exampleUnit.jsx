@@ -33,6 +33,7 @@ export default class Example extends React.Component {
         <Panel className={css(styles.slideInRight)}  header={this.renderTitle()}>
           <p className="panelText">{this.props.content.content}</p>
           <p className="panelText"><a target="_blank" href={this.props.content.url}>{this.props.content.linkTitle}</a></p>
+          <p className="panelText"><a target="_blank" href={this.props.content.gitUrl}>{this.props.content.gitTitle}</a></p>
         </Panel>
       );
     }else{
@@ -40,6 +41,7 @@ export default class Example extends React.Component {
         <Panel className={css(styles.slideInLeft)}  header={this.renderTitle()}>
           <p className="panelText">{this.props.content.content}</p>
           <p className="panelText"><a target="_blank" href={this.props.content.url}>{this.props.content.linkTitle}</a></p>
+          <p className="panelText"><a target="_blank" href={this.props.content.gitUrl}>{this.props.content.gitTitle}</a></p>
         </Panel>
       );
     }
