@@ -1,11 +1,12 @@
 import React from 'react';
 import Nav from '../nav/nav.jsx';
-import { Button, Grid, Row, Col, Panel  } from 'react-bootstrap';
+import { Button, Grid, Row, Col } from 'react-bootstrap';
 import HeaderText from '../headerText/headerText.jsx'
 import ExampleUnit from '../exampleUnit/exampleUnit.jsx'
 
 // TODO: change gitTitle and gitTitle to second title etc etc
-// TODO: maybe add alarmpi 
+// TODO: maybe add alarmpi
+// TODO: maybe add blog
 
 const examples = [
   {
@@ -26,7 +27,7 @@ const examples = [
   },
   {
     title: "CorSurf",
-    content: "Corsurf needed to have their site redone in a tight deadline. We started the work in late September and had the redone site up running and tested by November 1st ; just in time for their Christmas rush. The redone site lead to increased sales and brand awareness which will help Corsurf well into the future.",
+    content: "Corsurf needed to have their site redone in a tight deadline. We started the work in late September and had the redone site up running and tested by November 1st; just in time for their Christmas rush. The redone site lead to increased sales and brand awareness which will help Corsurf well into the future.",
     url: "https://www.corsurf.com/",
     linkTitle: "corsurf.com",
   },
