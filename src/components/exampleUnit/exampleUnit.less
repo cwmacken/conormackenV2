@@ -1,14 +1,21 @@
+@import "../../assets/baseStyles/base.less";
+
 .panel-default{
-  border-color: #378a9b;
+  border-color: @baseColor;
   margin-top: 20px;
 }
 
 .panel-default>.panel-heading {
     color: white;
-    background-color: #378a9b;
-    border-color: #378a9b;
+    background-color: @baseColor;
+    border-color: @baseColor;
 }
 
 .panelText{
   color: #777;
+}
+
+a, a:hover, a:visited{
+  color: @baseColor;
+  text-decoration: none;
 }
