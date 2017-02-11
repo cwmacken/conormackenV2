@@ -10,12 +10,12 @@ const facts = [
   'All of my work at DLAB was prototype based; hacking set top boxes running old versions of Web Kit, working with distributed Raspberry Pis and toying with odd TVOS’s still in their infancy, anything that got the job done.',
   'I pride myself on being the able to figure out the hard problems.',
   'I love helping businesses grow.',
-  'At DLAB I was commonly the go between for the technical team to other teams.',
+  'At DLAB I was commonly the go between for the technical team to non technical teams.',
   'I can explain that why your technical decision is wrong but give you workable alternatives.',
   'Data is important.',
   'Make it work, then make it pretty.',
   'At the end of the day business is about making a profitable dollar.',
-  'Started as a Front End contractor , left as a Senior Lead Developer.',
+  'Started DLAB as a Front End contractor , left as a Senior Lead Developer.',
   'I’d rather work with a team collaborative average devs than a team of “rockstars”.',
   'We > I.',
   'I love installing lightweight linux based OS’s on old computers.',
@@ -27,7 +27,8 @@ const facts = [
 
 class About extends React.Component {
 
-  // TODO: change animation
+  // TODO: Add fade in
+  
   constructor(props) {
     super(props);
     this.populate = this.populate.bind(this);
