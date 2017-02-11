@@ -6,7 +6,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: @baseFont;
   line-height: 1.5;
 }
 
@@ -25,6 +25,10 @@ body {
   margin-top: 0em;
 }
 
+a, a:hover, a:visited{
+  color: @secondaryColor;
+  text-decoration: none;
+}
 
 // /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {

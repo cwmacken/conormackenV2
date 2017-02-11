@@ -5,7 +5,7 @@
   letter-spacing: .1em;
   font-weight: 300;
   line-height: 2;
-  font-family: -apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: @baseFont;
   color: @secondaryColor;
   border-radius: .25rem;
   text-transform: uppercase;
@@ -24,21 +24,7 @@
 }
 
 .mobile{
-  background-color: @baseColor;;
-  letter-spacing: .1em;
-  font-weight: 300;
-  line-height: 2;
-  font-family: -apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: @secondaryColor;
-  border-radius: .25rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-overflow: ellipsis;
-  /* Required for text-overflow to do anything */
-  white-space: nowrap;
-  overflow: hidden;
-  text-align: center;
-  font-size: 14px;
+  .navBtnBase;
 }
 
 .mobileClicked{

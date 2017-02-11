@@ -7,7 +7,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 require("./nav.less")
 var hamburger = require('../../assets/images/hamburger.png')
 
-// TODO: maybe make the nav an overlay 
+// TODO: maybe make the nav an overlay
 
 import { fadeIn, fadeOut } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 
 const mobileWidth = 12
 
-const ltWidth = 12
+const ltWidth = 2
 
 const buttons = [
   {
