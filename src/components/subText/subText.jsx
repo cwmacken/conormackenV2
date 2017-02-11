@@ -15,12 +15,10 @@ const styles = StyleSheet.create({
     'line-height': '1.5',
     'font-family': '-apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
     'margin-top': '7px'
-
   }
 })
 
-
-export default class EmailCatcher extends React.Component {
+export default class SubText extends React.Component {
   // TODO: maybe add in fade in here
   render() {
     return (
