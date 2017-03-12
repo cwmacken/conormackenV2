@@ -14,9 +14,9 @@ const examples = [
     linkTitle: "Linkedin",
   },
   {
-    title: "Person 2",
-    content: "Stokecast is surf forecasting site designed to give users the relevant data on current conditions, it's designed to be simple and straightforward. Stokecast is my personal ongoing project that I use to test new frameworks and try new things. I’m particularly proud of the cron job associated with pulling the daily tide graph.",
-    url: "https://www.google.com/",
+    title: "James Felz",
+    content: "I was having some problems with a fairly complex website. Conor was able to identify the issue and create a solution very quickly. He's a great developer, and is highly skilled on both the front and back end, as well as on mobile.",
+    url: "https://www.linkedin.com/in/jamesfelz/",
     linkTitle: "Linkedin"
   }
 

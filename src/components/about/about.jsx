@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 const facts = [
   'I mostly work in JS ( Node / React ), I also have a some limited experience with Python and Swift.',
   'Former Directv DLAB (Directv’s R&D lab) developer.',
-  'All of my work at DLAB was prototype based; hacking set top boxes running old versions of Web Kit, working with distributed Raspberry Pis and toying with odd TVOS’s still in their infancy, anything that got the job done.',
+  'All of my work at DLAB was prototype based; hacking set top boxes running old versions of Web Kit, working with networks of Raspberry Pis and toying with odd TVOS’s still in their infancy, anything that got the job done.',
   'I pride myself on being the able to figure out the hard problems.',
   'I love helping businesses grow.',
   'At DLAB I was commonly the go between for the technical team to non technical teams.',
