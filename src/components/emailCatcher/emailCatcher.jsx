@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   },
   input: {
     animationName: fadeInLeftBig,
-    animationDuration: '2.5s',
+    animationDuration: '4.5s',
   }
 })
 
