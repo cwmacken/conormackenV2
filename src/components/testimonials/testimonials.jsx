@@ -8,9 +8,9 @@ import ExampleUnit from '../exampleUnit/exampleUnit.jsx'
 
 const examples = [
   {
-    title: "Person 1",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    url: "https://www.google.com/",
+    title: "Kevin Tague",
+    content: "In his time at DIRECTV’s Digital Innovation Lab (DLab), Conor quickly grew into an indispensable member of the prototype development team. He is a solid developer, a quick learner, and a creative problem solver. The enthusiasm and ingenuity he brings to his work were reflected in the cross-platform entertainment solutions he helped develop for web, mobile, and TV.",
+    url: "https://www.linkedin.com/in/kevin-tague-1a31092/",
     linkTitle: "Linkedin",
   },
   {
