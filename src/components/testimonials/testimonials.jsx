@@ -18,6 +18,12 @@ const examples = [
     content: "I was having some problems with a fairly complex website. Conor was able to identify the issue and create a solution very quickly. He's a great developer, and is highly skilled on both the front and back end, as well as on mobile.",
     url: "https://www.linkedin.com/in/jamesfelz/",
     linkTitle: "Linkedin"
+  },
+  {
+    title: "Andy Gossett - Corsurf.com",
+    content: "Conor was key in completely revamping our website, which had an immediate impact on our conversion rate. He has a deep understanding of the both the technical side, while still understanding the importance of the look and flow of a website.  His expertise was invaluable starting from the big picture of how to best build a successful website.",
+    url: "https://www.linkedin.com/in/andy-gossett-5760066b/",
+    linkTitle: "Linkedin"
   }
 
 ]

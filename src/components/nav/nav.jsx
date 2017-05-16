@@ -61,7 +61,7 @@ const buttons = [
   {
     title: 'blog',
     internalLink: false,
-    href: 'http://conormacken.com/blog/',
+    href: 'https://conormacken.com/blog/',
     offset: 0
   },
 ]
@@ -90,7 +90,7 @@ export default class Navbarcomp extends React.Component {
              if(!button.internalLink){
                return(
                  <Col className={this.state.mobileAnimation} xs={mobileWidth} mdOffset={button.offset} md={ltWidth} key={i}>
-                   <a target="_blank" href={button.href}>
+                   <a href={button.href}>
                      <h3 className={this.state.mobileNavClass} >{button.title}</h3>
                    </a>
                  </Col>

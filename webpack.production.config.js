@@ -4,6 +4,7 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
  devtool: 'cheap-module-source-map',
@@ -31,6 +32,7 @@ module.exports = {
    new webpack.optimize.AggressiveMergingPlugin(),
    new webpack.optimize.DedupePlugin(),
    new ExtractTextPlugin('[name]-[hash].min.css'),
+   new FaviconsWebpackPlugin('./src/assets/images/favicon.png'),
    new webpack.optimize.UglifyJsPlugin({
       compressor: {
         warnings: false,

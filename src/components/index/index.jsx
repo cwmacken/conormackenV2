@@ -74,7 +74,7 @@ class Index extends React.Component {
               </Col>
               <Col xs={12} sm={4} >
                   <AnimatedButton trans="home" name="work" timeout={2000} style="text-center btnThree" url="/work"/>
-                  <AnimatedButton trans="home" name="blog" timeout={2500} style="text-center btnFive" link={true} target="_blank" url="http://conormacken.com/blog"/>
+                  <AnimatedButton trans="home" name="blog" timeout={2500} style="text-center btnFive" link={true} url="https://conormacken.com/blog/"/>
               </Col>
           </Row>
           <EmailCatcher />
