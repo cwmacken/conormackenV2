@@ -38,12 +38,6 @@ const examples = [
     gitTitle: "Github Repo"
   },
   {
-    title: "The Fin Store",
-    content: "The Fin Store is a Shopify based e-commerce site. Set up from scratch by your’s truly as a move into running business’s and not just building web apps. An ongoing project that I hope to grow in the next few years.",
-    url: "https://thefinstore.com/",
-    linkTitle: "The Fin Store",
-  },
-  {
     title: "Carne Asada Boilerplate",
     content: "A boilerplate I set up with all the new fancy JS tools but setup for simple implementation and deployment. Designed to allow me to implement site quickly and efficiently with minimal set up and maximum concept validation. An ongoing project. Built with React, Redux, Node, Express, Firebase.",
     url: "https://github.com/cwmacken/carne-asada",

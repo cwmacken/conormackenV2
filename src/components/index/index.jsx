@@ -23,20 +23,6 @@ const styles = StyleSheet.create({
     'font-family': '-apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
     'line-height': '1.5',
     overflow: 'hidden'
-  },
-  subHeader: {
-    animationName: slideInRight,
-    animationDuration: '2.5s',
-    'text-align': 'center',
-    'font-size': '2rem',
-    'text-transform': 'uppercase',
-    color: '#777',
-    'letter-spacing': '.1em',
-    'font-weight': '300',
-    'line-height': '1.5',
-    'font-family': '-apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
-    'margin-top': '7px'
-
   }
 })
 
@@ -61,7 +47,7 @@ class Index extends React.Component {
           </Row>
           <Row>
               <Col xs={12} >
-                <SubHeaderText title="Full Stack JS Developer"/>
+                <SubHeaderText trans="contact" timeout={1000} title="Full Stack JS Developer"/>
               </Col>
           </Row>
           <Row className="marginTop">
@@ -74,7 +60,7 @@ class Index extends React.Component {
               </Col>
               <Col xs={12} sm={4} >
                   <AnimatedButton trans="home" name="work" timeout={2000} style="text-center btnThree" url="/work"/>
-                  <AnimatedButton trans="home" name="blog" timeout={2500} style="text-center btnFive" link={true} url="https://conormacken.com/blog/"/>
+                  <AnimatedButton trans="home" name="blog" timeout={2500} style="text-center btnFive" link={true} url="https://conormacken.com/blog/" target=""/>
               </Col>
           </Row>
           <EmailCatcher />

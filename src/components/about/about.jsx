@@ -20,7 +20,7 @@ const facts = [
   'I pride myself on being the able to figure out the hard problems.',
   'I love helping businesses grow.',
   'At DLAB I was commonly the go between for the technical team to non technical teams.',
-  'I can explain that why your technical decision is wrong but give you workable alternatives.',
+  'I can evaluate your technical decisions and provide you with practical alternatives.',
   'Data is important.',
   'Make it work, then make it pretty.',
   'At the end of the day business is about making a profitable dollar.',
@@ -30,7 +30,7 @@ const facts = [
   'I love installing lightweight linux based OS’s on old computers.',
   'Star Wars.',
   'I’m a surf junkie and build my own surfboards.',
-  'I’m mostly self taught and always willing learn.',
+  'I’m mostly self taught and always willing to learn.',
   'Karma.'
 ]
 

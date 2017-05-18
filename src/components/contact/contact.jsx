@@ -28,25 +28,25 @@ class Contact extends React.Component {
           <Row>
               <Col xs={12} >
                   <a href="mailto:hello@conormacken.com">
-                    <SubHeaderText title="hello@conormacken.com"/>
+                    <SubHeaderText title="hello@conormacken.com" trans="contact" timeout={3000}/>
                   </a>
               </Col>
           </Row>
           <Row className="marginTop">
               <Col xs={12} sm={4} >
-                <AnimatedButton trans="contact" name="linkedin" timeout={50} style="text-center btnTwo" link={true} target="_blank" url="https://www.linkedin.com/in/cmackendev"/>
+                <AnimatedButton trans="contact" name="linkedin" timeout={1000} style="text-center btnTwo" link={true} target="_blank" url="https://www.linkedin.com/in/cmackendev"/>
               </Col>
               <Col xs={12} sm={4} >
                   <AnimatedButton trans="contact" name="github" timeout={1000} style="text-center btnTwo" link={true} target="_blank" url="https://github.com/cwmacken"/>
               </Col>
               <Col xs={12} sm={4} >
-                  <AnimatedButton trans="contact" name="twitter" timeout={1500} style="text-center btnTwo" link={true} target="_blank" url="https://twitter.com/ConorMacken"/>
+                  <AnimatedButton trans="contact" name="twitter" timeout={1000} style="text-center btnTwo" link={true} target="_blank" url="https://twitter.com/ConorMacken"/>
               </Col>
 
           </Row>
           <Row>
             <Col  xs={12} smOffset={2} sm={8}>
-              <ContactForm trans="contact" name="contact form" timeout={2000}/>
+              <ContactForm trans="contact" name="contact form" timeout={1000}/>
             </Col>
 
           </Row>
