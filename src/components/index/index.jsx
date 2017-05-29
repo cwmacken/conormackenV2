@@ -47,7 +47,7 @@ class Index extends React.Component {
           </Row>
           <Row>
               <Col xs={12} >
-                <SubHeaderText trans="contact" timeout={1000} title="Full Stack JS Developer"/>
+                <SubHeaderText trans="contact" timeout={1000} title="Full Stack JS + Shopify Developer"/>
               </Col>
           </Row>
           <Row className="marginTop">

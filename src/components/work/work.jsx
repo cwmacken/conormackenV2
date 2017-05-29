@@ -17,6 +17,12 @@ const examples = [
     gitTitle: "Dlab on Instagram",
     gitUrl: "https://www.instagram.com/explore/locations/70680609/dlab-directv/"
   },
+	{
+    title: "CorSurf",
+    content: "Corsurf needed to have their shopify site redone on a tight deadline. We started the work in late September and had the redone site up running and tested by November 1st; just in time for their Christmas rush. The redone site lead to increased sales and brand awareness which will help Corsurf well into the future.",
+    url: "https://www.corsurf.com/",
+    linkTitle: "corsurf.com",
+  },
   {
     title: "Stokecast",
     content: "Stokecast is surf forecasting site designed to give users the relevant data on current conditions, it's designed to be simple and straightforward. Stokecast is my personal ongoing project that I use to test new frameworks and try new things. I’m particularly proud of the cron job associated with pulling the daily tide graph.",
@@ -24,12 +30,6 @@ const examples = [
     linkTitle: "Stokecast",
     gitUrl: "https://github.com/cwmacken/stokecast3",
     gitTitle: "Github Repo"
-  },
-  {
-    title: "CorSurf",
-    content: "Corsurf needed to have their site redone in a tight deadline. We started the work in late September and had the redone site up running and tested by November 1st; just in time for their Christmas rush. The redone site lead to increased sales and brand awareness which will help Corsurf well into the future.",
-    url: "https://www.corsurf.com/",
-    linkTitle: "corsurf.com",
   },
   {
     title: "Conormacken.com",
