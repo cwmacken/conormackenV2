@@ -33,14 +33,17 @@ class Contact extends React.Component {
               </Col>
           </Row>
           <Row className="marginTop">
-              <Col xs={12} sm={4} >
+              <Col xs={12} sm={3} >
                 <AnimatedButton trans="contact" name="linkedin" timeout={1000} style="text-center btnTwo" link={true} target="_blank" url="https://www.linkedin.com/in/cmackendev"/>
               </Col>
-              <Col xs={12} sm={4} >
+              <Col xs={12} sm={3} >
                   <AnimatedButton trans="contact" name="github" timeout={1000} style="text-center btnTwo" link={true} target="_blank" url="https://github.com/cwmacken"/>
               </Col>
-              <Col xs={12} sm={4} >
+              <Col xs={12} sm={3} >
                   <AnimatedButton trans="contact" name="twitter" timeout={1000} style="text-center btnTwo" link={true} target="_blank" url="https://twitter.com/ConorMacken"/>
+              </Col>
+							<Col xs={12} sm={3} >
+                  <AnimatedButton trans="contact" name="upwork" timeout={1000} style="text-center btnTwo" link={true} target="_blank" url="https://www.upwork.com/o/profiles/users/_~014674e3d57200c281/"/>
               </Col>
 
           </Row>
