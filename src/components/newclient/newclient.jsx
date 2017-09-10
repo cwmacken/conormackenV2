@@ -57,7 +57,7 @@ const facts = [
 		text:'Next Steps:'
 	},{
 		styles: "baseText",
-		text: '1hr free consultation to disucss your project.'
+		text: '1hr free consultation to discuss your project.'
 	},{
 		styles: "baseText",
 		text:"If we decide it's a good fit I'll put together a project roadmap (1-time $95 USD fee)."
