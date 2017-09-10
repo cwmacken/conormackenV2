@@ -21,7 +21,7 @@ const facts = [
   },
   {
     styles: "baseText",
-    text: 'Projects under 10 hours of work: $195 USD/hr'
+    text: 'Projects under 10 hours of work: $175 USD/hr'
   },
   {
     styles: "baseText",
@@ -38,7 +38,7 @@ const facts = [
 		text:'Under 10 hours: Installing and validating a Pinterest pixel.'
 	},{
 		styles: "baseText newClientBtmMargin",
-		text:'1 hrs x $195 USD/hr = $195 USD'
+		text:'1 hrs x $175 USD/hr = $175 USD'
 	},{
 		styles: "baseText",
 		text:'Under 40 hours: Updating a site to be mobile responsive and full site migration.'
