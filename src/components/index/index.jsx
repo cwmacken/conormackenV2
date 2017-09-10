@@ -52,7 +52,8 @@ class Index extends React.Component {
           </Row>
           <Row className="marginTop">
               <Col xs={12} sm={4} >
-                <AnimatedButton trans="home" name="contact" timeout={50} style="text-center btnOne" url="/contact"/>
+                <AnimatedButton trans="home" name="new clients" timeout={50} style="text-center btnFive" url="/newclient"/>
+								<AnimatedButton trans="home" name="contact" timeout={550} style="text-center btnThree" url="/contact"/>
               </Col>
               <Col xs={12} sm={4} >
                   <AnimatedButton trans="home" name="about" timeout={1000} style="text-center btnTwo" url="/about"/>

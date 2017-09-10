@@ -4,6 +4,7 @@ import Index from './components/index/index.jsx';
 import Contact from './components/contact/contact.jsx';
 import Error from './components/error/error.jsx'
 import About from './components/about/about.jsx'
+import Newclient from './components/newclient/newclient.jsx'
 import Testimonials from './components/testimonials/testimonials.jsx'
 import Work from './components/work/work.jsx'
 import { Router, Route, Link, browserHistory, IndexRoute} from 'react-router'
@@ -37,6 +38,7 @@ ReactDOM.render((
         <Route path="/about" component={About}/>
         <Route path="/testimonials" component={Testimonials}/>
         <Route path="/work" component={Work}/>
+				<Route path="/newclient" component={Newclient}/>
         <Route path="*" component={Error}/>
       </Route>
     </Router>

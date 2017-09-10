@@ -25,44 +25,57 @@ const styles = StyleSheet.create({
 
 const mobileWidth = 12
 
-const ltWidth = 2
+const mdWidth = 2
 
 const buttons = [
   {
     title: 'home',
     internalLink: true,
     href: '/',
-    offset: 1,
+    offset: 0,
+    mdWidth: mdWidth
+  },
+  {
+    title: 'new clients',
+    internalLink: true,
+    href: '/newclient',
+    offset: 0,
+    mdWidth: mdWidth
   },
   {
     title: 'contact',
     internalLink: true,
     href: '/contact',
-    offset: 0
+    offset: 0,
+    mdWidth: mdWidth
   },
   {
     title: 'about',
     internalLink: true,
     href: '/about',
-    offset: 0
+    offset: 0,
+    mdWidth: mdWidth
   },
   {
     title: 'testimonials',
     internalLink: true,
     href: '/testimonials',
-    offset: 0
+    offset: 0,
+    mdWidth: mdWidth
   },
   {
     title: 'work',
     internalLink: true,
     href: '/work',
-    offset: 0
+    offset: 0,
+    mdWidth: mdWidth
   },
   {
     title: 'blog',
     internalLink: false,
     href: 'https://conormacken.com/blog/',
-    offset: 0
+    offset: 0,
+    mdWidth: mdWidth
   },
 ]
 
@@ -89,7 +102,7 @@ export default class Navbarcomp extends React.Component {
 
              if(!button.internalLink){
                return(
-                 <Col className={this.state.mobileAnimation} xs={mobileWidth} mdOffset={button.offset} md={ltWidth} key={i}>
+                 <Col className={this.state.mobileAnimation} xs={mobileWidth} mdOffset={button.offset} md={button.mdWidth} key={i}>
                    <a href={button.href}>
                      <h3 className={this.state.mobileNavClass} >{button.title}</h3>
                    </a>
@@ -97,7 +110,7 @@ export default class Navbarcomp extends React.Component {
                )
              }else{
                return(
-                 <Col className={this.state.mobileAnimation} xs={mobileWidth} mdOffset={button.offset} md={ltWidth} key={i}>
+                 <Col className={this.state.mobileAnimation} xs={mobileWidth} mdOffset={button.offset} md={button.mdWidth} key={i}>
                    <Link to={button.href}>
                      <h3 className={this.state.mobileNavClass} >{button.title}</h3>
                    </Link>
