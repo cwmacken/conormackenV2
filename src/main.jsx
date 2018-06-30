@@ -34,11 +34,6 @@ ReactDOM.render((
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={Index}/>
-        <Route path="/contact" component={Contact}/>
-        <Route path="/about" component={About}/>
-        <Route path="/testimonials" component={Testimonials}/>
-        <Route path="/work" component={Work}/>
-				<Route path="/newclient" component={Newclient}/>
         <Route path="*" component={Error}/>
       </Route>
     </Router>

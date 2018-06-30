@@ -3,7 +3,7 @@ require("./index.less")
 import { Button, Grid, Row, Col  } from 'react-bootstrap';
 import { Link } from 'react-router'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import { slideInRight, fadeInDownBig } from 'react-animations';
+import { slideInRight, fadeInDownBig, zoomIn, fadeIn } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
 import EmailCatcher from '../emailCatcher/emailCatcher.jsx'
 import AnimatedButton from '../animatedButton/animatedButton.jsx'
@@ -23,6 +23,10 @@ const styles = StyleSheet.create({
     'font-family': '-apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
     'line-height': '1.5',
     overflow: 'hidden'
+  },
+  announceTextAnimation: {
+    animationName: fadeIn,
+    animationDuration: '3.5s'
   }
 })
 
@@ -50,21 +54,16 @@ class Index extends React.Component {
                 <SubHeaderText trans="contact" timeout={1000} title="Full Stack JS + Shopify Developer"/>
               </Col>
           </Row>
-          <Row className="marginTop">
-              <Col xs={12} sm={4} >
-                <AnimatedButton trans="home" name="new clients" timeout={50} style="text-center btnFive" url="/newclient"/>
-								<AnimatedButton trans="home" name="contact" timeout={550} style="text-center btnThree" url="/contact"/>
-              </Col>
-              <Col xs={12} sm={4} >
-                  <AnimatedButton trans="home" name="about" timeout={1000} style="text-center btnTwo" url="/about"/>
-                  <AnimatedButton trans="home" name="testimonials" timeout={1500} style="text-center btnFour" url="/testimonials"/>
-              </Col>
-              <Col xs={12} sm={4} >
-                  <AnimatedButton trans="home" name="work" timeout={2000} style="text-center btnThree" url="/work"/>
-                  <AnimatedButton trans="home" name="blog" timeout={2500} style="text-center btnFive" link={true} url="https://conormacken.com/blog/" target=""/>
-              </Col>
+          <Row>
+            <Col className={css(styles.announceTextAnimation)} xs={12} >
+              <h3 className="announceText">
+                Due to the increased number/size of project requests I was receiving I have joined forces with a some extraordinarily talented individuals to form <a href="https://theavantagency.com">The Avant Agency</a>. If you want to work with me and my exceptional team please visit <a href="https://theavantagency.com">theavantagency.com</a>.
+              </h3>
+              <h3 className="announceText">
+                I can be reached at <a href="mailto:hello@conormacken.com">hello@conormacken.com</a>
+              </h3>
+            </Col>
           </Row>
-          <EmailCatcher />
       </Grid>
     );
   }
